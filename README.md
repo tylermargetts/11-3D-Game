@@ -1,1 +1,1 @@
-In this exercise I used a pivot node, kinematic body, mesh instance, and camera to create a mobile first person scene. 
+Welcome to Ocean Avenue! This is a racing game that uses the W, A, D, and S keys for steering. The object of the game is to complete three laps and reach the finish in under 2 minutes and 30 seconds. The record is 2 minutes and 12 seconds if you want a challenge!
