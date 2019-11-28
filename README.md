@@ -1,2 +1,1 @@
-# 11-3D-Game
-3D game project 
+In this exercise I used a pivot node, kinematic body, mesh instance, and camera to create a mobile first person scene. 
