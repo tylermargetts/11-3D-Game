@@ -7,11 +7,15 @@ var max_speed = 3
 var min_speed = 0 
 var max_velocity = 5
 var ACC = 1
-var speed_time = 0 
+var speed_time = 0
+var lap = 0
 
 
 
 var velocity = Vector3()
+
+func increase_lap(lap): 
+	$HUD/Lap.text = str(lap)
 
 func get_input():
     var input_dir = Vector3()
