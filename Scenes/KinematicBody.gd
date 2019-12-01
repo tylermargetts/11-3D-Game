@@ -10,9 +10,14 @@ var ACC = 1
 var speed_time = 0
 var lap = 0
 
-
-
 var velocity = Vector3()
+
+signal inclap
+
+func _ready():
+	var WorldNode = get_node("/root/World")
+	connect("inclap", WorldNode, "increase_lap")
+	
 
 func increase_lap(lap): 
 	$HUD/Lap.text = str(lap)
@@ -29,6 +34,7 @@ func get_input():
     if Input.is_action_pressed("turn_right"):
         rotate(camera.global_transform.basis.y, -.015)
     input_dir = input_dir.normalized()
+    
     return input_dir
 	
 func get_speed(): 
@@ -49,6 +55,8 @@ func _physics_process(delta):
     velocity.x = (desired_velocity.x)
     velocity.z = desired_velocity.z
     velocity = move_and_slide(velocity, Vector3.UP, true)
+
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
